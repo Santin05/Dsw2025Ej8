@@ -5,13 +5,12 @@ namespace Dsw2025Ej8.Domain;
 public abstract class CuentaBancaria
 {
     public string Numero { get; }
-    public decimal Saldo { get;protected set; }
+    public decimal Saldo { get; protected set; }
     public TipoCuenta Tipo { get; protected set; }
     public Estado Estado { get; protected set; }
     public decimal TasaDeInteres { get; set; }
     public decimal LimiteDeDescubierto { get; set; }
     public decimal Comision { get; set; }
-
     public string[] Titulares { get; }
 
 
