@@ -19,27 +19,13 @@ namespace Dsw2025Ej8.Domain
 
         public override void Depositar(decimal monto)
         {
-            ValidarCuenta();
-            ValidarMonto(monto);
+            ValidarOperacion(monto);
             decimal montoFinal = monto - (monto * Comision);
             Saldo += montoFinal;
         }
-
-        private void ValidarCuenta()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ValidarMonto(decimal monto)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void Retirar(decimal monto)
         {
-            ValidarCuenta();
-            ValidarMonto(monto);
-
+            ValidarOperacion(monto);
             if (Saldo - monto >= -LimiteDeDescubierto)
             {
                 Saldo -= monto;
