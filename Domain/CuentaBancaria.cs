@@ -48,6 +48,6 @@ public abstract class CuentaBancaria
 
     public void AplicarInteres()
     {
-        // este metodo se lo aplica en el otro tipo dde cuenta
+       
     }
 }
